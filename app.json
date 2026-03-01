@@ -1,48 +1,60 @@
 {
   "expo": {
-    "name": "flowday",
+    "name": "FlowDay",
     "slug": "flowday",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/ios/AppIcon.appiconset/Icon-App-76x76@2x.png",
     "scheme": "flowday",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.prawesh12.flowday",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "icon": "./assets/ios/iTunesArtwork@2x.png"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "backgroundColor": "#0D0D0D",
+        "foregroundImage": "./assets/android/mipmap-xxxhdpi/ic_launcher_foreground.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.prawesh12.flowday"
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/android/ic_launcher-web.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/android/mipmap-xxxhdpi/ic_launcher.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#0D0D0D",
           "dark": {
-            "backgroundColor": "#000000"
+            "backgroundColor": "#0D0D0D",
+            "image": "./assets/android/mipmap-xxxhdpi/ic_launcher.png"
           }
         }
-      ]
+      ],
+      "expo-sqlite"
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "a9f77a09-1098-4cc5-ad06-48df3c2566e6"
+      }
     }
   }
 }

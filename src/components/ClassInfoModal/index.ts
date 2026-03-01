@@ -1,0 +1,1 @@
+export { ClassInfoModal } from "./ClassInfoModal";
